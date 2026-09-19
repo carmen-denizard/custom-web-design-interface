@@ -1,0 +1,506 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Crystal Flowers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Google Font - Pompiere-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Pompiere&display=swap" rel="stylesheet">
+				
+		<!-- Google Font - Faculty Glyphic-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="images/favicon.png">
+		
+		<!-- My internal CSS -->
+		<style>
+			
+			/* Moved up the intro background image to fill top banner */
+			body {
+				padding-top: 0;
+			}
+			
+			/* Google Fonts */
+			.pompiere-regular {
+				font-family: "Pompiere", sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+			.faculty-glyphic-regular {
+				font-family: "Faculty Glyphic", sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+		
+			/* Header */
+			#header {
+				position: fixed;
+				z-index: 10000;
+				left: 0;
+				top: 0;
+				width: 100%;
+				/* background: rgba(240, 210, 255, 0.95);
+				background: linear-gradient(0deg, rgba(219,170,255,0.95) 0%, rgba(240,210,255,0.95) 100%); */
+				background: RGBA(240,210,255,0.95);
+				background: linear-gradient(0deg, rgba(240, 210, 255, 1) 0%, 
+					        rgba(219, 170, 255, 1) 100%);
+				height: 4em;
+				line-height: 3em;
+				box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+				/* border-bottom: 1px dashed white; */
+			}
+
+			#header h1 {
+				position: absolute;
+				left: 1em;
+				top: 0;
+				height: 4em;
+				line-height: 2.75em;
+				cursor: default;
+				color: darkviolet;
+				font-size: 140%;
+				/* margin-top: 15px; */
+			}
+			
+			header h2 {
+				font-family: "Faculty Glyphic", sans-serif;
+				font-weight: 400;
+				font-style: normal;
+				/* font-size: 250%; */
+				color: darkviolet;
+			}
+			
+			#header nav {
+				height: 4em;
+				line-height: 4em;
+				font-family: "Pompiere", sans-serif;
+				font-weight: 400;
+				font-style: normal;
+				/* font-size: 80%; */
+				text-transform: uppercase;
+			}
+			
+			/* Navigation Link Colors */
+			#header nav a:link {color: darkviolet;}
+			#header nav a:visited {color: mediumblue;}
+			
+			#header nav a:hover {
+				color: cornflowerblue; 
+				
+				/* Solid color
+				background-color: lavender; */
+				
+				/* Gradient Background Color
+				background: #3F5EFB;
+				background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%); */
+				
+				/* Border color */
+				border: 1px dashed rgba(100,149,237,1.00);
+				font-weight: bold;
+				
+				/* Rounding Edges */
+				-webkit-border-radius: 10px 10px 10px 10px;
+				border-radius: 10px 10px 10px 10px; 
+			}
+			
+			#header nav a:active {
+				color: magenta; 
+				
+				/* Solid color
+				background-color: #FFC7FF */
+				
+				border: 1px dashed magenta;
+			}
+			
+			/* Intro Page Subtitle */
+			#intro {
+				text-shadow:
+					/* Option 1: sharp highlight */
+					1px 1px 2px #5B0082; 
+					
+					/* Option 2: Shadow/Glow
+					#000 1px 0 10px; */
+					
+					/* Option 3: Reflection 
+					5px 5px #000000; */
+					
+					/* Option 4: Combo effect
+					1px 1px 2px red,
+					0 0 1em blue,
+					0 0 0.2em blue; */
+			}
+			
+			/* Intro Page Title */
+			#intro h2 {
+				font-size: 250%;
+				color: #AB43D8;
+			}
+		
+			/* Editing Boxes */
+			.box {
+				background: rgba(240,210,255,0.70);
+				
+				/* Rounding Edges */
+				-webkit-border-radius: 20px 20px 20px 20px;
+				border-radius: 20px 20px 20px 20px;
+				
+				color: black;
+				border: 1px dashed cornflowerblue;
+				/*background-image: linear-gradient(rgb(100,149,237), rgb(255,0,255,1.00))*/
+				/*
+				border-style: dashed;
+				border-color: magenta blue blue magenta;
+				*/
+				
+				/* Tried to make a gradient in the border */
+				/* border-image: linear-gradient(0deg, rgb(100,149,237), rgb(255,0,255,1.00)) 1; */
+			}
+			
+			/* Editing Circle Button */
+			.button { }
+			
+			/* Editing style2 (Test) */
+			.style2 { color: black; }
+			
+			/* Editing style3 (Contact area) */
+			.style3 {
+				text-align: left;
+				color: black;
+			}
+			
+			/* New Section - Three */
+			#three {
+				background: url("images/overlay.png"), url("images/three.jpg");
+				background-size: 256px 256px, cover;
+				background-attachment: fixed, fixed;
+				background-position: top left, center center;
+			}
+			
+			/* Editing Background Image of Gallery */
+			#work {
+				background-color: white;
+				background-image: url("images/pawel-czerwinski-2dyR13FNg2I-unsplash.jpg");
+				background-repeat: repeat;
+				background-size: cover;
+				background-attachment: local;
+			}
+			
+			/* To align Contact & Gallery text to the left */
+			/*
+			#work p { text-align: left;}
+			#contact p { text-align: left;}
+			*/
+			
+			/* Editing Background Image of Contact Content */
+			#contact {
+				background-color: #CCD7FF;
+			}
+			
+			/* Footer */
+			#footer {
+				/* border-top: 1px dashed white; */
+				/* background-color: rgba(240, 210, 255, 0.95); */
+				background: rgb(219,170,255);
+				background: linear-gradient(0deg, rgba(219,170,255,0.95) 0%, rgba(240,210,255,0.95) 100%);
+				
+				/* CSS gradient generator: https://cssgradient.io/ */
+				
+			}
+			
+			/* Editing footer banner */
+			.icons { color: darkviolet; }
+			.menu { color: darkviolet; }
+			
+		</style>
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1 class="faculty-glyphic-regular">Crystal Flowers</h1>
+				<nav>
+					<ul>
+						<li><a href="#intro">Intro</a></li>
+						<li><a href="#one">Latest</a></li>
+						<li><a href="#two">Trending</a></li>
+						<li><a href="#three">Limited Editions</a></li>
+						<li><a href="#work">Gallery</a></li>
+						<li><a href="#contactinfo">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content"> <!-- add into quotes: box style2 -->
+					<header>
+						<h2>Delicate Adornments</h2>
+					</header>
+					
+					<p>Handcrafted treasures that celebrate the art of subtle sophistication.
+						<!-- 
+						2-3 sentences
+						Welcome to <strong>Big Picture</strong> a responsive site template designed by <a href="https://html5up.net">HTML5 UP</a><br /> and released for free under the <a href="https://html5up.net/license">Creative Commons Attribution license</a>
+						-->
+					</p>
+					
+					<p> <a href="#welcome"> <img src="images/white-arrow.png" alt=""/> </a> </p>
+					
+					<!-- <footer>
+						<a href="#one" class="button style2 down">More</a>
+					</footer> -->
+				</div>
+				<a href="#one" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>The Latest</h2>
+					</header>
+					
+					<p>Explore our newest arrivals, where timeless elegance meets contemporary design.
+						<!--Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur magna. -->
+					</p>
+					
+					<p> <a href="#latest"> <img src="images/black-arrow.png" alt=""/> </a> </p>
+					
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Trending</h2>
+					</header>
+					
+					<p>Explore the pieces everyone's loving right now — unique, stylish, and perfect for adding that special touch to your look.</p>
+					
+					<p> <a href="#trending"> <img src="images/black-arrow.png" alt=""/> </a> </p>
+					
+				</div>
+				<a href="#three" class="button style2 down anchored">Next</a>
+			</section>
+		
+		<!-- New Section - Three -->
+			<section id="three" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Limited Editions</h2>
+					</header>
+					
+					<p>Explore our exclusive, handcrafted pieces — each one a rare treasure, only available a limited time.</p>
+					
+					<p> <a href="#limited"> <img src="images/black-arrow.png" alt=""/> </a> </p>
+					
+				</div>
+				<a href="#work" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Work -->
+			<section id="work" class="main style3 primary">
+				<div class="content">
+					<header>
+						<h2>Gallery</h2>
+						
+						<p>Take a look through some of our favorite pieces! This little gallery features a mix of bestsellers and hidden gems — each one carefully designed and made with creativity, care, and a love for the details. Whether you’re shopping for yourself or looking for the perfect gift, these pieces give you a feel for what we’re all about: artful, wearable jewelry that helps you show off your own unique style.</p>
+					</header>
+
+					<!-- Gallery  -->
+						<div class="gallery">
+							<article class="from-left">
+								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Royal Amethyst" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="The Quiet Flower" alt="" /></a>
+							</article>
+							
+							<article class="from-left">
+								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="The Moonsent" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="The Waterfall Oracle" alt="" /></a>
+							</article>
+							
+							<article class="from-left">
+								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The Ancient Gold" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="The Elegant Fuchsia" alt="" /></a>
+							</article>
+							
+							<!-- Additional gallery images -->
+							<article class="from-left">
+								<a href="images/fulls/07.jpg" class="image fit"><img src="images/thumbs/07.jpg" title="The Shy Hearts" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/08.jpg" class="image fit"><img src="images/thumbs/08.jpg" title="The Vintage Forest" alt="" /></a>
+							</article>
+						</div>
+					<!--
+					<header>
+						<h2 id="gallery"></h2>
+						<p>Take a look through some of our favorite pieces! This little gallery features a mix of bestsellers and hidden gems—each one carefully designed and made with creativity, care, and a love for the details. Whether you’re shopping for yourself or looking for the perfect gift, these pieces give you a feel for what we’re all about: artful, wearable jewelry that helps you show off your own unique style.</p>
+					</header>
+					-->
+				</div>
+			</section>
+
+		<!-- Contact -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2 id="welcome">Delicate Adornments</h2>
+						<p>Welcome to Crystal Flowers, where simplicity meets meaning in every handcrafted piece. Each item is thoughtfully designed and made using ethically sourced, conflict-free materials from environmentally responsible suppliers — because beauty should never come at a cost to people or the planet! No two pieces are exactly alike, as our designs are inspired by nature’s own artistry, reflecting the uniqueness of both the person who wears it and the hands that shape them. At Crystal Flowers, you’ll find quiet elegance with a conscience.</p>
+						
+						<!-- 
+						<p>
+						Welcome to Radiant Origins, your destination for timeless, ethically crafted jewelry that tells a story as beautiful as the pieces themselves. We believe that elegance should never come at the expense of our planet or its people, which is why every gemstone, metal, and material we use is responsibly sourced from trusted, conflict-free suppliers. Our commitment to sustainability and ethical craftsmanship ensures that you can shop with confidence—knowing each piece is not only stunning, but also aligned with your values. Explore our collection and find jewelry that reflects both your style and your conscience.
+
+						Welcome to Crystal Flowers, where each piece of jewelry is a celebration of individuality, beauty, and conscious craftsmanship. At the heart of our collection lies a deep commitment to ethical sourcing—every gemstone and metal is carefully selected from conflict-free, environmentally responsible suppliers. No two pieces are exactly alike, as our designs are inspired by nature’s own artistry, making every item as unique as the person who wears it. With Crystal Flowers, you can embrace elegance that not only enhances your style but also reflects your values.
+
+						Welcome to Crystal Flowers, where simplicity meets meaning in every handcrafted piece. Each item is thoughtfully designed and made using ethically sourced, conflict-free materials—because beauty should never come at a cost to people or the planet. No two pieces are exactly alike, reflecting the uniqueness of both the natural materials and the hands that shape them. At Crystal Flowers, you’ll find quiet elegance with a conscience.
+
+						Welcome to Crystal Flowers, where simplicity meets meaning in every handcrafted piece. Each item is thoughtfully designed and made using ethically sourced, conflict-free materials from environmentally responsible suppliers — because beauty should never come at a cost to people or the planet. No two pieces are exactly alike, as our designs are inspired by nature’s own artistry, reflecting the uniqueness of both the person who wears it and the hands that shape them. At Crystal Flowers, you’ll find quiet elegance with a conscience.
+
+
+		Welcome to Crystal Flowers, where each piece of jewelry is a celebration of individuality, beauty, and conscious craftsmanship. 
+
+						No two pieces are exactly alike, as our designs are inspired by nature’s own artistry, making every item as unique as the person who wears it. 
+
+						With Crystal Flowers, you can embrace elegance that not only enhances your style but also reflects your values.
+
+		We believe that elegance should never come at the expense of our planet or its people, which is why every gemstone, metal, and material we use is responsibly sourced from trusted, conflict-free, environmentally responsible suppliers. 
+
+		Our commitment to sustainability and ethical craftsmanship ensures that you can shop with confidence — knowing each piece is not only stunning, but also aligned with your values. 
+
+						Explore our collection and find jewelry that reflects both your style and your conscience.
+
+
+						</p> -->
+						
+					</header>
+					
+					<header>
+						<h2 id="latest">The Latest</h2>
+						<p>At our little online shop, we don’t see jewelry as just something to wear — we see it as a form of art. Every time we put together a new piece or collection, we team up with artists and other creative folks to design something that’s not only beautiful, but also full of personality. We’re all about turning creative ideas into pieces you can actually wear and enjoy every day. Our latest items are no exception — they’re made with care, inspired by art, and meant to help you express your own unique style in a fun, meaningful way!</p>
+							
+						<!--
+						<p>At our small online jewelry store, we believe that jewelry isn't just an accessory — it's a wearable form of art. Each time we design a new piece, whether it's a full collection or a single standout item, we collaborate closely with talented artists, designers, and other creative minds to craft something truly special. Our goal is to blend artistic expression with thoughtful craftsmanship, creating pieces that feel personal, meaningful, and visually striking. The latest additions to our store reflect this philosophy, combining unique materials, imaginative design, and careful attention to detail to bring you jewelry that doesn't just complement your style — it tells a story.</p>
+
+						<p>We believe that jewelry isn't just a part of fashion; it can be an art form. So with every new set, collection, or piece that we release, we work with talented artists and other creative individuals to make art that you can wear.</p>
+						-->
+					</header>
+					
+					<header>
+						<h2 id="trending">Trending</h2>
+						<p>We’re so grateful for all the love and support we’ve received from our amazing customers — it truly means the world to us! That’s why we’ve put together a special section to make shopping even more fun and easy. In this section, you’ll find all the pieces that are getting the most attention, whether they’re longtime favorites or fresh new finds. It’s a great way to see what others are loving right now, and maybe even discover a new favorite of your own!</p>
+						
+						<!-- <p>We greatly appreciate all of the love and support from our customers. That's why we make it easy for you to find your favorite pieces, or discover some new ones, by gathering them all and showcasing them!</p> -->
+						
+					</header>
+					
+					<!-- New Gallery  -->
+					<header>
+						<h2 id="limited">Limited Editions</h2>
+						<p>This gallery features a small handful of our limited edition pieces — unique designs made in small batches and only available for a short time. Each item is crafted with special details and materials you won’t find in our regular collections, making them perfect for anyone who loves one-of-a-kind jewelry. Once they’re gone, they’re gone for good (maybe), so don’t miss your chance to grab something truly special!</p>
+					</header>
+					
+						<div class="gallery">
+							<article class="from-left">
+								<a href="images/fulls/09.jpg" class="image fit"><img src="images/thumbs/09.jpg" title="The Garnet Queen" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/10.jpg" class="image fit"><img src="images/thumbs/10.jpg" title="The Soft Rainbow" alt="" /></a>
+							</article>
+							
+							<article class="from-left">
+								<a href="images/fulls/11.jpg" class="image fit"><img src="images/thumbs/11.jpg" title="The Icy Leaves" alt="" /></a>
+							</article>
+							<article class="from-right">
+								<a href="images/fulls/12.jpg" class="image fit"><img src="images/thumbs/12.jpg" title="The Midnight Lagoon" alt="" /></a>
+							</article>
+						</div>
+					
+					<p> <a href="#intro"> <img src="images/black-arrow-up.png" alt=""/> </a> </p>
+					<p>Back to top</p>
+					
+					<div class="box">
+						<header> <h2 id="contactinfo">Contact Information</h2> </header>
+						
+						<p>Feel free to share any questions, comments, concerns, or suggestions you may have about current or future sets, collections, or pieces with us. We always appreciate any feedback our customers have!</p>
+						
+						<p>Email: jane.doe@fakemail.com</p>
+						<p>Phone: 123-456-7890</p>
+						<p>Address: 123 Fake Street, New York, NY 12345</p>
+
+						<!--
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
+								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+							</div>
+							
+							<ul class="actions special">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+						-->
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="icons">
+						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+						<li><a href="https://www.facebook.com/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.linkedin.com/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+						<li><a href="https://www.pinterest.com/" target="_blank" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+					</ul>
+
+				<!-- Menu -->
+					<ul class="menu">
+						<li>&copy; Crystal Flowers</li>
+						<li>Design: Carmen Denizard
+							<!-- <a href="https://html5up.net">HTML5 UP</a>	-->
+						</li>
+						
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
