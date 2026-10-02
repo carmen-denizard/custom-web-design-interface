@@ -6,7 +6,7 @@ An interactive web design project made with HTML5 and CSS3 to develop skills in 
 
 ## Features
 * **Customized UI/UX Layout:** Modified default structural properties to develop an aesthetically cohesive identity
-* **Optimized Assets:** Utilized Asset Creation tools to ensure all assets and elements were visually clear and properly formatted for fast and smooth webpage performance
+* **Optimized Assets:** Utilized Adobe Photoshop and Illustrator to ensure all assets and elements were visually clear and properly formatted for fast and smooth webpage performance
 * **Interactive Foundation:** Applied HTML5 and CSS3 to certify functionality of buttons and make certain of a smooth user experience
 
 ## Tools & Tech Stack
